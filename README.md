@@ -5,14 +5,12 @@ Specs:
         
 
 	Ticker: DTC
-	
-	No Premine, No IPO/ICO
 
-	Block time: 79 seconds
+	Block time: 60 seconds
 
-	Coinbase maturity: 90 blocks
+	Coinbase maturity: 60 blocks
 
-	PoS Coin Maturity 5h (hiPOS)
+	PoS Coin Maturity 1h
 
 	Algo: SHA256d
 
