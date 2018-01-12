@@ -17,6 +17,3 @@ Specs:
 	RPC Port: 32101
 
 	P2P Port: 32101
-
-
-For more information about DayTraderCoin, please contact bitlabzinc@gmail.com
