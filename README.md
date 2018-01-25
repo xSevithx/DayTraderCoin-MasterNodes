@@ -16,4 +16,4 @@ Specs:
 
 	RPC Port: 32101
 
-	P2P Port: 32101
+	P2P Port: 32001
