@@ -47,7 +47,28 @@ QMAKE_LFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
 # We need to exclude this for Windows cross compile with MinGW 4.2.x, as it will result in a non-working executable!
 # This can be enabled for Windows, when we switch to MinGW >= 4.4.x.
 }
+windows {
+    BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
+    BOOST_INCLUDE_PATH=c:/deps/boost_1_57_0
+    BOOST_LIB_PATH=c:/deps/boost_1_57_0/stage/lib
 
+    BDB_INCLUDE_PATH=c:/deps/db-4.8.30.NC/build_unix
+    BDB_LIB_PATH=c:/deps/db-4.8.30.NC/build_unix
+    OPENSSL_INCLUDE_PATH=c:/deps/openssl-1.0.1l/include
+    OPENSSL_LIB_PATH=c:/deps/openssl-1.0.1l
+
+    MINIUPNPC_INCLUDE_PATH=c:/deps/miniupnpc
+    MINIUPNPC_LIB_PATH=c:/deps/miniupnpc
+    QRENCODE_INCLUDE_PATH=c:/deps/qrencode-3.4.4/
+    QRENCODE_LIB_PATH=c:/deps/qrencode-3.4.4/.libs/
+
+        #USE_BUILD_INFO = 1
+        DEFINES += HAVE_BUILD_INFO
+        USE_QRCODE=1
+        LIBS += -Wl,-Bstatic
+    	USE_UPNP=-
+
+}
 # for extra security (see: https://wiki.debian.org/Hardening): this flag is GCC compiler-specific
 QMAKE_CXXFLAGS *= -D_FORTIFY_SOURCE=2
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
